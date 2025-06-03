@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cartinha para Nicole 💌</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: pink;
+      overflow-x: hidden;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    .hearts {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: red;
+      transform: rotate(45deg);
+      animation: floatHearts 10s linear infinite;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: red;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: -10px;
+      top: 0;
+    }
+
+    @keyframes floatHearts {
+      0% {
+        transform: translateY(100vh) rotate(45deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh) rotate(45deg);
+        opacity: 0;
+      }
+    }
+
+    .container {
+      z-index: 1;
+      text-align: center;
+      padding: 30px;
+      max-width: 600px;
+      background: rgba(255, 255, 255, 0.7);
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      color: #b30059;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      opacity: 0;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    p:nth-of-type(1) { animation-delay: 0.10s; }
+    p:nth-of-type(2) { animation-delay: 1.8s; }
+    p:nth-of-type(3) { animation-delay: 10.20s; }
+    p:nth-of-type(4) { animation-delay: 20.30s; }
+    p:nth-of-type(5) { animation-delay: 30.40s; }
+    p:nth-of-type(6) { animation-delay: 40.50s; }
+    p:nth-of-type(7) { animation-delay: 50.60s; }
+    p:nth-of-type(8) { animation-delay: 60.70s; }
+    p:nth-of-type(9) { animation-delay: 70.80s; }
+
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    .heart-beat {
+      margin-top: 20px;
+      width: 50px;
+      height: 50px;
+      background-color: red;
+      transform: rotate(45deg);
+      animation: beat 1s infinite;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .heart-beat::before,
+    .heart-beat::after {
+      content: "";
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background-color: red;
+      border-radius: 50%;
+    }
+
+    .heart-beat::before {
+      top: -25px;
+      left: 0;
+    }
+
+    .heart-beat::after {
+      left: -25px;
+      top: 0;
+    }
+
+    @keyframes beat {
+      0%, 100% { transform: scale(1) rotate(45deg); }
+      50% { transform: scale(1.2) rotate(45deg); }
+    }
+
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="hearts">
+    <!-- Vários corações -->
+    <div class="heart" style="left: 10%; animation-delay: 0s;"></div>
+    <div class="heart" style="left: 30%; animation-delay: 2s;"></div>
+    <div class="heart" style="left: 50%; animation-delay: 4s;"></div>
+    <div class="heart" style="left: 70%; animation-delay: 1s;"></div>
+    <div class="heart" style="left: 90%; animation-delay: 3s;"></div>
+  </div>
+
+  <div class="container">
+    <h1>Para Minha Princesinha 💘</h1>
+    <p>Oi, meu Amorzinho...</p>
+
+    <p>Às vezes, nem acredito que tenho a sorte de te chamar de Minha. Você é a Melhor parte dos meus dias, a calma no meu caos e a
+      luz que guia meu coração.</p>
+
+    <p>Desde que te conheci, há 3 anos atrás, minha vida nunca mais foi a mesma. E agora, há 2 meses, estamos oficialmente juntos, Finalmente ksksk, e agora tudo ficou ainda mais Especial.</p>
+
+    <p>Você é linda por dentro e por fora. Seu sorriso é a luz que chega para iluminar meus dias mais escuros e fazer parte das minhas noites mais claras com Você, sua voz é como um abraço que chega nos momentos que eu mais preciso, e seu jeitinho faz meu coração derreter de Amor por Você. Eu quero viver mil momentos com você. Quero rir Você, cuidar de Você, enfrentar o mundo ao seu lado, crescer ao seu lado, e construir um futuro junto a Você.</p>
+
+    <p>Quero passar o resto da minha vida com você, minha princesa. Você é meu anjo, minha inspiração, meu amor eterno. 
+      Eu te amo, eu te amo em cada universo, mais do que palavras podem dizer, e só quero te fazer feliz todos os dias da sua vida. Obrigado por existir e por estar comigo, Você me tornou digno, meu Amor.  ❤️</p>
+
+      <hr>
+
+    <p>Entáo, estou fazendo essa parte do site no dia 02/06 né, hoje lá no ônibus tu faltou me bater, porque falei q o site era
+      sobre Fortnite pra disfarçar, tinha dias que queria falar com vc sobre esse site, mas tive que segurar até agora, nesse momento tão especial.</p>
+
+    <p>Bom, me esforcei muito pra fazer esse site, quebrei a cabeça tentando uns códigos novos, vi vídeo aulas pra aprender, mas sei
+      que no final esse esforço vai valer a pena, espero que goste, meu Amorzinho</p>
+
+    <p>Ah, detalhe, infelizmente no celular não está indo a música que coloquei de fundo, não sei o porque, mas vou te mostrar no
+      Chromebook depois, porque aqui está funcionando certinho tá bom meu Amorzinho??</p>
+
+    <p>E olha só, nem vem dizer que tirei essas coisas do Chat não em... ksksks</p>
+
+      <br>
+    <div class="heart-beat"></div>
+  </div>
+
+  <audio autoplay loop>
+    <source src="musica_lisboa_recorte.mp3" type="audio/mpeg">
+    Seu navegador não suporta áudio.
+  </audio>
+</body>
+</html>
